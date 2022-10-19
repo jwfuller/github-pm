@@ -9,7 +9,7 @@
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
-	<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+	<link rel="stylesheet" href="dist/theme/blue.css" id="theme">
 	<link rel="stylesheet" href="css/logo/logo.css">
 	<link rel="stylesheet" href="css/custom.css">
 
@@ -22,17 +22,16 @@
 		<div class="slides">
 			<section>
 				<h1>Project Management using GitHub</h1>
-				<p>James Fuller, Core Tech & Apps</p>
-				<aside class="notes">We started doing this to track work for the FOLIO project, the new OneSearch came
-					along because we were working so closely.</aside>
+				<aside class="notes">This is a brief introduction to using GitHub for Project Management. I want to give you a tour through major features and show you a little of what is possible. This is not intended as a training or to be comprehensive.</aside>
 			</section>
 			<section>
 				<h2>GitHub Structures</h2>
 				<ul>
-					<li>Users</li>
-					<li>Organizations</li>
+					<li>User</li>
+					<li>Organization</li>
 					<li>Repository (repo)</li>
 					<li>Issue</li>
+					<li>Discussion</li>
 					<li>Project</li>
 				</ul>
 				<aside class="notes">
@@ -41,81 +40,150 @@
 						<li>Personal accounts are then associated with our <em>Organization Account</em>.</li>
 						<li>A <em>Repository</em> is a location in GitHub where files, code, and Issues are stored and
 							managed.</li>
-						<li>Repositories can be owned by Personal or Organization Accounts.</li>
-						<li>Each Repository has option to enable the <em>Issues</em> feature which enables you to track
-							ideas, tasks, bugs, or feedback.</li>
+						<li>Repositories can be owned by either a Personal or Organization Account.</li>
+						<li>Each Repository has option to enable the <em>Issues</em> and <em>Discussions</em> features which enables you to track tasks and bugs, and discuss ideas or solicit feedback.</li>
 						<li>You can use <em>Projects</em> to organize and prioritize Issues.</li>
 				</aside>
 			</section>
 			<section>
-				<section>
-					<h2>Project Board and Views</h2>
-					<aside class="notes">Project boards are a great way to get an overview of what is going on</aside>
-				</section>
-				<section>
-					<img src="images/projectOverview.png" alt="Column view of GitHub Project Board" />
-				</section>
-				<section>
-					<h3>Swimlanes</h3>
-					<img src="images/projectOverviewSwimlanes.png" alt="GitHub Project Board highlighting Swimlanes" />
-					<aside class="notes">Swimlanes represent Status and are customized per Project and do not impact
-						other projects. An Issue could be in the "Waiting on" status in your project and "In Progress"
-						in another.</aside>
-				</section>
-				<section>
-					<h3>Views</h3>
-					<img src="images/projectOverviewViews.png" alt="GitHub Project Board highlighting Views" />
-					<aside class="notes">Table and Swimlane/Trello views, views can also be created to Pre Filter the
-						project</aside>
-				</section>
-				<section>
-					<img src="images/projectOverviewTable.png" alt="Table view of GitHub Project Board" />
-				</section>
-				<section>
-					<h3>Repository and Issue Number</h3>
-					<img src="images/projectOverviewRepo.png"
-						alt="GitHub Project Board highlighting Repo and Issue number" />
-					<aside class="notes">You may recall that all Issues are associated with a single Repository, both of
-						those pieces of information are show here.</aside>
-				</section>
-			</section>
-			<section>
-				<section>
-					<h2>Filtering</h2>
-					<aside class="notes">You can filtering Issues by things like Assignee, Label, Milestone, Status.
-						These filters are used Project boards and in the full list of issues for a Repository.
-					</aside>
-				</section>
-				<section>
-					<img src="images/filtering1.png" alt="Filtering by Assignee" />
-				</section>
-				<section>
-					<img src="images/filtering2.png"
-						alt="Show users and references (Me, no assignee) for filter values" />
-				</section>
-				<section>
-					<img src="images/filtering3.png" alt="View filter for assignee: @me and label: documentation" />
-				</section>
+				<h2>Repositories</h2>
+				<img src="images/repos.png" alt="Organization overview page showing a list of repositories" />
+				<aside class="notes">A repository contains all of your project's files and each file's revision history. It can be public or private.</aside>
 			</section>
 			<section>
 				<section>
 					<h2>Issues, Labels, and Milestones</h2>
-					<aside class="notes"></aside>
+					<aside class="notes">All of these exist within a repository and are specific to the repository they are created in.</aside>
+				</section>
+				<section>
+					<img src="images/issueList.png" alt="A list of Github Issues" />
+					<aside class="notes">A list of Open GitHub issues on the SCAG project</aside>
+				</section>
+				<section>
+					<img src="images/issueListFilters.png" alt="A list of Github Issues" />
+					<aside class="notes">Can filter the list by Author, Label, Project, Milestone, and Assignee. All of these filters are represented in the Filter search box and the URL, so it is easy to power-user search and share a specific view like "All open issues, labeled with Bug, and in Milestone PI 23.1.4". The filter syntax is the same in other places in GitHub like Projects.</aside>
+				</section>
+				<section>
+					<img src="images/issueListLabels.png" alt="A list of Github Issues" />
+					<aside class="notes">You can see the labels that are applied to an Issue</aside>
+				</section>
+				<section>
+					<img src="images/issueListMilestone.png" alt="A list of Github Issues" />
+					<aside class="notes">The milestone that an Issue is assigned to</aside>
+				</section
+				><section>
+					<img src="images/issueListTasks.png" alt="A list of Github Issues" />
+					<aside class="notes">The state of subtasks that are tracked by an Issue. Allows you to create the Epic/Story relationship</aside>
 				</section>
 				<section>
 					<img src="images/issue.png" alt="A Github Issue" />
+					<aside class="notes">Here is an Issue, this one is using the Checklist feature.</aside>
 				</section>
 				<section>
-					<img src="images/issueCheckBoxes.png" alt="A Github Issue" />
+					<img src="images/issueCheckbox.png" alt="A Github Issue highlighting the Checkbox feature" />
+					<aside class="notes">The first comment in an Issue is special, it serves as the Description. Checklist items in the field are aggregated to a <code># of x tasks</code> at the top of the issue. Some of the checklist items have been turned into their own Issues. You can see the status as well via the green dot or purple check. There is also a nifty feature to convert items to Issues, so you can write out a list of tasks and then turn them into full Issues later.</aside>
 				</section>
 				<section>
-					<img src="images/issueCheckBoxes2.png" alt="A Github Issue" />
+					<img src="images/issueAssignee.png" alt="A Github Issue highlighting the Assignee feature" />
+					<aside class="notes">Tasks can be assigned to up to 10 people</aside>
 				</section>
 				<section>
-					<img src="images/issueLabels.png" alt="A Github Issue" />
+					<img src="images/issueLabels.png" alt="A Github Issue highlighting the Label feature" />
+					<aside class="notes">Default labels are assigned when a repo is created, and can be customized on a per repo basis. If the default labels are changed at a later date, repos are not updated.</aside>
 				</section>
 				<section>
-					<img src="images/issueMilestones.png" alt="A Github Issue" />
+					<img src="images/issueProject.png" alt="A Github Issue highlighting the Project feature" />
+					<aside class="notes">Issues can be assigned to on or more projects, and you can manage the per-project status here as well.</aside>
+				</section>
+				<section>
+					<img src="images/issueMilestone.png" alt="A Github Issue highlighting the Milestone feature" />
+					<aside class="notes">An issue can be placed into a Milestone. Milestones exist at the repo level and are not shared across repos.</aside>
+				</section>
+				<section>
+					<img src="images/issueFollow.png" alt="A Github Issue highlighting the Notification feature" />
+					<aside class="notes">You can follow Issues, Repositories, or Organizations. There are also different levels of notifications which I will touch on later.</aside>
+				</section>
+				<section>
+					<img src="images/issueListMilestoneLink.png" alt="Links to Labels and Milestones" />
+					<aside class="notes">Labels and Milestones are accessed from the Issue List page.</aside>
+				</section>
+				<section>
+					<img src="images/labels.png" alt="Label overview page" />
+					<aside class="notes">Labels allow you to cross-cut your issue list. You can also see a "Convert Issues" button, that
+						allows you to convert all issues with a specific label into a Discussion.</aside>
+				</section>
+				<section>
+					<img src="images/milestone.png" alt="Milestone overview page" />
+					<aside class="notes">Milestones can be assigned Due Dates, have a description, and show progress towards completion.</aside>
+				</section>
+			</section>
+			<section>
+				<section><h2>Discussions</h2>
+					<aside class="notes"></aside>
+				</section>
+				<section>
+					<img src="images/discussionList.png" alt="Discussion overview page" />
+					<aside class="notes">Use discussions to ask and answer questions, share information, make announcements, and conduct or participate in a conversation about a repository. There are different type of Discussions including Announcements (only maintainers can create), polls, Q&A (allows the best answer to be voted on), and open ended discussion.</aside>
+				</section><section>
+					<img src="images/discussion.png" alt="A Discussion" />
+					<aside class="notes">You can also lock discussions if they become heated or come to a conclusion. Discussions use the same labels as Issues and can be converted to Issues.</aside>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Projects and Views</h2>
+				</section>
+				<section>
+					<h3>Board View</h3>
+					<img src="images/project.png" alt="Board view of GitHub Project Board" />
+					<aside class="notes">Projects exist at the Organization level, so can be used across repositories. This is a Board view of a project with Columns created from a custom field, in this case for Status.</aside>
+				</section>
+				<section>
+					<h3>Changing Views</h3>
+					<img src="images/projectViews.png" alt="Switching between Views on a GitHub Project Board" />
+					<aside class="notes">You can create up to 42 views per project. Each view can have it's own display characteristics and saved filters. There are also great filters like `assignee:@me` that allows you to create one "My Work" view that works for all users. The small arrow next to a View name gives you access to the customization options for the view.</aside>
+				</section>
+				<section>
+					<h3>Customizing Views</h3>
+					<img src="images/projectViewsCustomize.png" alt="Switching between Views on a GitHub Project Board" />
+					<aside class="notes"></aside>
+				</section>
+				<section>
+					<h3>Table View</h3>
+					<img src="images/projectTable.png" alt="Table view of GitHub Project Board" />
+					<aside class="notes">Here is a table display of the same information, in this case grouped by the Priority custom field. In both cases you can customize what information is displayed either on the cards in the board view, or in the columns of a table view.</aside>
+				</section>
+				<section>
+					<h3>Repository and Issue Number</h3>
+					<img src="images/projectRepo.png"
+						alt="GitHub Project Board highlighting Repo and Issue number" />
+					<aside class="notes">You may recall that all Issues are associated with a single Repository and that a project can span multiple repos, both of those pieces of information are show here.</aside>
+				</section><section>
+					<h3>Custom Project Fields</h3>
+					<ul>
+						<li>Text</li>
+						<li>Number</li>
+						<li>Date</li>
+						<li>Single select list</li>
+						<li>Iteration</li>
+					</ul>
+					<aside class="notes">Several different types of custom fields. 'Iteration' allows you to setup repeating time blocks (like 2 week sprints). You can filter for the 'current' or 'next' iteration. These fields are specific to the Project, so while they feel a lot like Milestones, there is not a connection between the two structures. There are some other cool things you can do like summing a 'points' field and showing that at the top of Board with Columns for Iteration</aside>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Filtering Issues</h2>
+					<aside class="notes">You can filtering Issues by things like Assignee, Label, Milestone, Iteration, Status. These filters are used Project boards and in the full list of issues for a Repository. And like with Repos, the URL reflects your filters so it is easy to share what you are looking at.
+					</aside>
+				</section>
+				<section>
+					<h3>Autosuggestion Filters</h3>
+					<img src="images/filtering1.png" alt="Filtering by Assignee" />
+				</section>
+				<section>
+					<h3>A Filtered View</h3>
+					<img src="images/filtering2.png" alt="View filter for assignee: @ken and label: Story" />
+					<aside class="notes">Projects also have some reporting features (called "Insights") that support bar, column, and line charts. This allows you to create things like burn-down charts</aside>
 				</section>
 			</section>
 			<section>
@@ -124,34 +192,17 @@
 					<aside class="notes"></aside>
 				</section>
 				<section>
+					<h3>Watching a Repo</h3>
 					<img src="images/watching.png" alt="Watching a Repo" />
 				</section>
 				<section>
-					<img src="images/issueWatch.png" alt="Watching an Issue" />
+					<h3>Following an Issue</h3>
+					<img src="images/issueFollow.png" alt="Following an Issue" />
 				</section>
 				<section>
-					<img src="images/bell.png" alt="Unread notifications" />
-				</section>
-				<section>
+					<h3>Accessing Notifications</h3>
 					<img src="images/notifications.png" alt="Notification Screen" />
 				</section>
-			</section>
-			<section>
-				<h2>SES Project</h2>
-				<p><a
-						href="https://github.com/orgs/culibraries/projects/19">https://github.com/orgs/culibraries/projects/19</a>
-				<aside class="notes"></aside>
-			</section>
-			<section>
-				<h2>Resources</h2>
-				<ul>
-					<li><a href="https://docs.google.com/document/d/1TAV-640eYwexu5uzgytZGvx4ROloUWQWlv_wbKHFA7k/edit">CU
-							Documentation</a>
-						on Google Drive</li>
-					<li><a href="https://docs.github.com/en/issues/trying-out-the-new-projects-experience">GitHub
-							Documentation - Projects</a></li>
-				</ul>
-				<aside class="notes"></aside>
 			</section>
 			<section>
 				<h2>Questions?</h2>
